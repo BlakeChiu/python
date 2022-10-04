@@ -1,4 +1,6 @@
 #(1)匯入套件
+from json import load
+from operator import mod
 from statistics import mode
 from turtle import title
 from keras.utils import np_utils
@@ -113,3 +115,14 @@ plot_images_labels_prediction(x_test_image,y_test_label,
 df=pd.crosstab(y_test_label,prediction,
             rownames=['label'],colnames=['predict'])
 print(df)
+
+
+model.save_weights('my_model_weights.hdf5')
+model.load_weights('my_model_weights.hdf5')
+
+model.save('my_model.h5')
+del model
+
+from keras.models import load_model
+model=load_model('my_model.h5')
+print(model.summary())
