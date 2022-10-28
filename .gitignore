@@ -3,3 +3,5 @@
 /extra-practice
 /python-numpy
 /__pycache__
+CNN-AutoEncoder/Data/npy_train_data/X.npy
+CNN-AutoEncoder/Data/npy_train_data/Y.npy
