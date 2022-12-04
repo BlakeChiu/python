@@ -2,11 +2,11 @@ import pandas as pd
 from sklearn import datasets
 from jqmcvi import base
 from sklearn import cluster 
-# loading the dataset
+#loading the dataset
 X = datasets.load_iris()
 df = pd.DataFrame(X.data)
  
-# We store the clusters
+#We store the clusters
 k_means = cluster.KMeans(n_clusters=3)
 k_means.fit(df)
 y_pred = k_means.predict(df)
